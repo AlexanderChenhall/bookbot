@@ -20,6 +20,11 @@ def print_book(path_to_file):
         book_text = file.read()
         return(book_text)
 
+def get_letter_count(path_to_file):
+    letter_occurances = {letter: 0 for letter in string.ascii_lowercase}
+    book_text = get_number_of_words_in_book(path_to_file)
+    return letter_occurances
+
 def get_number_of_words_in_book(path_to_file):
     book_text = print_book(path_to_file)
     separated_text = book_text.split()
