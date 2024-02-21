@@ -26,7 +26,7 @@ def get_letter_count(path_to_file):
     split_text = re.split(r'\W*', book_text)
     split_text_lowercase = [letter.lower() for letter in split_text if letter]
     alphabet = list(string.ascii_lowercase)
-    for x, elem in enumerate(split_text):
+    for x, elem in enumerate(split_text_lowercase):
         if elem not in alphabet:
             pass
         else:
