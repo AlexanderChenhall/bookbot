@@ -31,7 +31,6 @@ def get_letter_count(path_to_file):
             pass
         else:
             letter_occurances[elem] += 1
-    print(split_text_lowercase)
     return letter_occurances
 
 def get_number_of_words_in_book(path_to_file):
