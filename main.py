@@ -22,7 +22,16 @@ def print_book(path_to_file):
 
 def get_letter_count(path_to_file):
     letter_occurances = {letter: 0 for letter in string.ascii_lowercase}
-    book_text = get_number_of_words_in_book(path_to_file)
+    book_text = print_book(path_to_file)
+    split_text = re.split(r'\W*', book_text)
+    split_text_lowercase = [letter.lower() for letter in split_text if letter]
+    alphabet = list(string.ascii_lowercase)
+    for x, elem in enumerate(split_text):
+        if elem not in alphabet:
+            pass
+        else:
+            letter_occurances[elem] += 1
+    print(split_text_lowercase)
     return letter_occurances
 
 def get_number_of_words_in_book(path_to_file):
