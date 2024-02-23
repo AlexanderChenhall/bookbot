@@ -1,7 +1,9 @@
 import re
 import string
 def main():
-    path_to_file = "books/frankenstein.txt"
+    path_to_file = "books/"
+    path_to_file_append = input("Enter book title, example: frankenstein.txt\n")
+    path_to_file += path_to_file_append
     generate_report(path_to_file)
 
 
